@@ -18,9 +18,8 @@ const About: React.FC = () => {
         <Wrapper>
           <Card>
             <CardText>
-              Este é um software montado em conjunto com um grupo de amigos
-              feito para auxiliar a comunicação e distribuição de informação
-              entre hospitais e responsáveis.
+              Este é um software montado para auxiliar a comunicação e
+              distribuição de informação entre hospitais e responsáveis.
             </CardText>
             <CardText>
               Para que os mesmos estejam cientes das informações necessárias de
