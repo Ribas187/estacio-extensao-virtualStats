@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
 import { format, differenceInYears, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale/pt-BR';
 import { ActivityIndicator } from 'react-native';
@@ -17,6 +16,7 @@ import {
   LastUpdate,
   LastUpdateValue,
 } from './styles';
+import { router } from 'expo-router';
 
 interface IProps {
   cod: string;
@@ -34,8 +34,6 @@ export function PatientResume({ cod }: IProps) {
     {} as PatientInfo
   );
   const [loading, setLoading] = useState(true);
-
-  const navigation = useNavigation();
 
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const fetcher = (url: string) =>
@@ -80,7 +78,7 @@ export function PatientResume({ cod }: IProps) {
   }, [patientInfo.nascimento]);
 
   return (
-    <Container onPress={() => navigation.navigate('Status', { cod })}>
+    <Container onPress={() => router.navigate(`/(patients)/status?cod=${cod}`)}>
       {!loading ? (
         <>
           <Name>{patientInfo.nome}</Name>
