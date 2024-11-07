@@ -11,12 +11,16 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const Title = styled.Text`
+  margin-bottom: 18px;
   font-family: 'Roboto-Medium';
   font-size: 20px;
   color: #fff;
 `;
 
-export const LeftButton = styled(RectButton)``;
+export const LeftButton = styled(RectButton)`
+  margin-bottom: 18px;
+  margin-left: 10px;
+`;
 
 export const RightButton = styled(RectButton)`
   min-width: 30px;
