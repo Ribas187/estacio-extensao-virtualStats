@@ -23,14 +23,11 @@ export default function Welcome() {
       );
 
       if (!firstTimeValue) {
-        console.log('first time');
-
         await AsyncStorage.setItem(
           '@VirtualStats:first-time',
           JSON.stringify(true)
         );
       } else {
-        console.log('not first time');
         router.navigate('/(drawer)');
       }
     }
